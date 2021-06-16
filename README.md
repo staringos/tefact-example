@@ -1,4 +1,6 @@
-# test
+# Tefact Editor Example
+
+The example of [Tefact Editor](https://github.com/staringos/tefact)
 
 ## Project setup
 ```
@@ -24,6 +26,3 @@ npm run test:unit
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
