@@ -2,15 +2,15 @@
   <div class="hello">
     <div>
       <Editor
-          :value="target"
-          :editorSetting="settings"
-          @addTarget="handleAddTarget"
-          @editTarget="handleEditTarget"
-          @share="handleShare"
-          @shareCancel="handleShareCancel"
-          @save="handleSave"
-          @back="handleGoBack"
-          @openModifier="handleOpenModifier"
+        :value="target"
+        :editorSetting="settings"
+        @addTarget="handleAddTarget"
+        @editTarget="handleEditTarget"
+        @share="handleShare"
+        @shareCancel="handleShareCancel"
+        @save="handleSave"
+        @back="handleGoBack"
+        @openModifier="handleOpenModifier"
       ></Editor>
     </div>
   </div>
@@ -18,20 +18,20 @@
 
 <script lang="ts">
 import Vue from "vue";
-import Editor, { getDefaultFeature } from "@tefact/editor"
+import Editor, { getDefaultFeature } from "@tefact/editor";
 
 export default Vue.extend({
-  name: "HelloWorld",
+  name: "EditorPage",
   data() {
     return {
       target: getDefaultFeature("page"),
       settings: {
         app: {
-          id: (new Date).getTime(),
-          type: "normal"
+          id: new Date().getTime(),
+          type: "normal",
         },
         appType: "normal",
-        device: 'pc',
+        device: "pc",
         uploadUrl: "",
         formList: [],
         datasetList: [],
@@ -41,24 +41,26 @@ export default Vue.extend({
         onPublish: () => {},
         getTargetByIdHandler: () => {},
         onGetTargetList: () => {},
-      }
-    }
+      },
+    };
   },
   props: {
     msg: String,
   },
   components: {
-    Editor
+    Editor,
   },
   methods: {
     handleAddTarget() {},
     handleEditTarget() {},
     handleShare() {},
     handleShareCancel() {},
-    handleSave() {},
+    handleSave() {
+      alert("保存中...");
+    },
     handleGoBack() {},
     handleOpenModifier() {},
-  }
+  },
 });
 </script>
 
